@@ -1,0 +1,20 @@
+<!--Admin View - Add New-->
+<!--Admin View - Add New-->
+<!--Admin View - Add New-->
+
+<div class="arrowBack">
+  <a href="#/admin/listView"><i class="fa fa-arrow-left"></i>Back to Admin</a>
+</div>
+
+  <div class="productForm">
+    <h3>Add a new product</h3>
+    <form ng-submit="adminCtrl.addProduct(newItem)">
+      <p><input type="text" ng-model="newItem.image" placeholder="img Url"></p>
+      <p><input type="text" ng-model="newItem.productName" placeholder="Item Name"></p>
+      <p><input type="text" ng-model="newItem.price" placeholder="Price"></p>
+      <p><textarea type="text" ng-model="newItem.productDescription" placeholder="Item Description"></textarea></p>
+      <div class="addProduct">
+        <button type="submit">Add Product</button>
+      </div>
+    </form>
+  </div>

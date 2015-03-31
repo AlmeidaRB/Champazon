@@ -1,2 +1,1 @@
-# Champazon
-creating a CRUD product store, baby amazon, snowboard functionality only - AngularJS
+#First practice using angular framework to 'recreate' Amazon.

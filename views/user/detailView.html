@@ -1,0 +1,47 @@
+<!--User View - Detail-->
+<!--User View - Detail-->
+<!--User View - Detail-->
+
+<div class="arrowBack">
+  <a href="#/user/listView"><i class="fa fa-arrow-left"></i>Back to Shop</a>
+</div>
+
+<div class="detailContainer">
+  <div class = "itemDetail">
+    <div class="productImagePrice">
+      <img data-ng-src="{{mainCtrl.singleItem.image}}" height='250' alt=""/>
+      <p>Brand: {{mainCtrl.singleItem.productName}}</p>
+      <p>Price: {{mainCtrl.singleItem.price | currency}}</p>
+    </div>
+    <div class="productDetails">
+      <p>{{mainCtrl.singleItem.productDescription}}</p>
+      <div class="buttons2">
+        <p><a href="#/user/cart/" ng-click="mainCtrl.addToCart(mainCtrl.singleItem)">Add to Cart</a></p>
+      </div>
+      <div>
+        <p><a href="" ng-click="showReviews = !showReviews">Show Reviews</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="productReviews"  ng-show = "showReviews"> <!-- ng-controller="ReviewController as reviewCtrl" -->
+    <p>Reviews:</p>
+      <ul>
+        <li class="review" ng-repeat="review in mainCtrl.singleItem.reviews"> <!--"review in reviewCtrl.reviews" -->
+          <p>Stars: {{review.stars}}</p>
+          <p>{{review.body}}</p>
+          <p>By: {{review.author}}</p>
+        </li>
+      </ul>
+    <p><a href="" ng-click="showAddReview = !showAddReview">Add A Review</a></p>
+    <div class="addReview" ng-show = "showAddReview" >
+      <form name="reviewForm" ng-submit="mainCtrl.addReview(mainCtrl.singleItem, review)">
+        <p class="stars">Stars: <span><input type="number" name="reviewstars" ng-model="review.stars"></span></p>
+        <p class="reviewBody">
+        <textarea name="reviewBody" ng-model="review.body" cols="30" rows="10"></textarea>
+        <p><label for="reviewBody" ng-model="review.author">by:</label><button type="submit">Submit Review</button></p>
+      </form>
+    </div>
+  </div>
+</div>

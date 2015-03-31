@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <title>Champazon2</title>
+</head>
+<body ng-app="champazon">
+
+  <!--top navbar section-->
+  <!--top navbar section-->
+  <!--top navbar section-->
+  <div class="fixedTop">
+    <div class="topnav">
+      <ul>
+        <li><a href="/#/"><img src="styles/images/logo.png" alt=""></a></li>
+        <li><a href="#/user/listView">Snowboards</a></li>
+        <li><a href="">Surfboards</a></li>
+        <li><a href="">Skis</a></li>
+        <h3>Water & Snow Sporting Goods</h3>
+      </ul>
+    </div>
+    <div class="shoppingcart">
+      <ul>
+        <li><a href="#/user/cart/"><i class="fa fa-shopping-cart"></i> Shopping Cart</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <!--end top navbar section-->
+  <!--end top navbar section-->
+  <!--end top navbar section-->
+
+<div ng-view></div>
+
+  <!--footer-->
+  <!--footer-->
+  <!--footer-->
+    <div class="footer">
+      <hr>
+      <a href="#/"><img src="styles/images/logo.png" alt=""></a>
+      <ul>
+        <li><a href="#/user/listView">Snowboards</a></li>
+        <li><a href="">Surfboards</a></li>
+        <li><a href="">Skis</a></li>
+      </ul>
+      <ul>
+        <li>Contact Champazon:</li>
+        <li>Phone: <a href="tel:(555)-123-4567">(555)-123-4567</a></li>
+        <li>|</li>
+        <li>Email: <a href="mailto:hr@champazon.com">hr@champazon.com</a></li>
+      </ul>
+      <ul>
+        <li><a href="#/user/cart/">Check your Cart <i class="fa fa-shopping-cart"></i></a></li>
+        <div class="login">
+          <div ng-controller="AdminController as adminCtrl"><li><input type="password" ng-model="username"> <button ng-click="adminCtrl.login(username)">Admin Login</button></li></div>
+        </div>
+      </ul>
+    </div>
+  <!--end footer-->
+  <!--end footer-->
+  <!--end footer-->
+
+
+<!--vendor scripts -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
+
+<!--main app scripts -->
+  <script src ="/app.js"></script>
+  <script src ="/controller.js"></script>
+  <script src="/service.js"></script>
+
+<!--admin scripts -->
+
+
+<!--user scripts -->
+
+
+</body>
+</html>
