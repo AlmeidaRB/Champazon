@@ -4,10 +4,8 @@
 angular.module('champazon')
   .factory('StoreService', function ($http, $rootScope) {
 
-    var url = 'http://tiy-fee-rest.herokuapp.com/collections/champazon';
+    var url = 'http://tiy-fee-rest.herokuapp.com/collections/champazon2';
 
-// Functions for the Admin
-// Functions for the Admin
 // Functions for the Admin
 
     var getProducts = function () {
@@ -31,8 +29,6 @@ angular.module('champazon')
     };
 
 // Functions for the User
-// Functions for the User
-// Functions for the User
 
     var addReview = function (item, review) {
       review = {
@@ -44,8 +40,6 @@ angular.module('champazon')
       $http.put(url + '/' + item._id, item);
     };
 
-//Functions for the Cart
-//Functions for the Cart
 //Functions for the Cart
 
     var cart = [];
