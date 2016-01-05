@@ -4,7 +4,7 @@
 angular.module('champazon')
   .factory('StoreService', function ($http, $rootScope) {
 
-    var url = 'http://tiy-fee-rest.herokuapp.com/collections/champazon2';
+    var url = 'http://tiy-fee-rest.herokuapp.com/collections/champazon';
 
 // Functions for the Admin
 // Functions for the Admin
