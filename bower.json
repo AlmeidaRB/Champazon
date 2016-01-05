@@ -1,9 +1,9 @@
 {
- "name": "TechTalkCHS",
+ "name": "Champazon",
  "version": "0.0.0",
- "homepage": "https://github.com/raveve/TechTalkCHS",
+ "homepage": "https://github.com/almeidarb/Champazon",
  "authors": [
-   "raveve <raven.askew@gmail.com>"
+   "almeidarb <blantonalmeida@gmail.com>"
  ],
  "license": "MIT",
  "private": true,
