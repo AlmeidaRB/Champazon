@@ -2,7 +2,7 @@
 
 <div class="listContainer">
   <ul>
-    <!--<li class = "item" ng-repeat="item in mainCtrl.items">-->
+    <<li class = "item" ng-repeat="item in mainCtrl.items track by $index">
       <img ng-src="{{item.image}}" height='250' alt=""/>
       <div class="productInfo">
       <p>Brand: {{item.productName}}</p>
