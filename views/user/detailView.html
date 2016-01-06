@@ -26,7 +26,7 @@
   <div class="productReviews"  ng-show = "showReviews"> <!-- ng-controller="ReviewController as reviewCtrl" -->
     <p>Reviews:</p>
       <ul>
-        <!--<li class="review" ng-repeat="review in mainCtrl.singleItem.reviews"> <!--"review in reviewCtrl.reviews" -->
+        <li class="review" ng-repeat="review in mainCtrl.singleItem.reviews track by $index"> <!--"review in reviewCtrl.reviews" -->
           <p>Stars: {{review.stars}}</p>
           <p>{{review.body}}</p>
           <p>By: {{review.author}}</p>
