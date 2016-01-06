@@ -4,7 +4,7 @@
 angular.module('champazon')
   .factory('StoreService', function ($http, $rootScope) {
 
-    var url = 'http://almeidarb.github.io/Champazon/#/';
+    var url = 'http://almeidarb.github.io/TheYellowFaces/';
 
 // Functions for the Admin
 
