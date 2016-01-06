@@ -29,7 +29,7 @@
         templateUrl: 'views/user/shoppingCart.html',
         controller: 'MainController as mainCtrl'
       })
-      .when('/user/detail/:itemIndex', {
+      .when('/user/detail', {
         templateUrl: 'views/user/detailView.html',
         controller: 'MainController as mainCtrl'
       })
