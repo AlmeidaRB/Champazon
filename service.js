@@ -67,7 +67,7 @@ angular.module('champazon')
 
     return {
       getItems: getProducts,
-      getItem: getSingleItem,
+      getRide: getSingleRide,
       addItem: addProduct,
       deleteItem: deleteProduct,
       editItem: editProduct,
