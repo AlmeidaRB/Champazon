@@ -9,6 +9,10 @@
         templateUrl: 'views/main.html',
         controller: 'MainController as mainCtrl'
       })
+      .when('/user/ride', {
+        templateUrl: 'views/user/ride.html',
+        controller: 'AdminController as adminCtrl'
+      })
       .when('/admin/editproduct/:itemIndex', {
         templateUrl:'views/admin/editItem.html',
         controller: 'AdminController as adminCtrl'
