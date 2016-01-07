@@ -25,10 +25,6 @@
         templateUrl: 'views/user/listView.html',
         controller: 'MainController as mainCtrl'
       })
-      .when('/user/ride', {
-        templateUrl: 'views/user/ride.html',
-        controller: 'MainController as mainCtrl'
-      })
       .when('/user/cart', {
         templateUrl: 'views/user/shoppingCart.html',
         controller: 'MainController as mainCtrl'
