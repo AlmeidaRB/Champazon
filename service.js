@@ -11,6 +11,9 @@ angular.module('champazon')
     var getProducts = function () {
       return $http.get(url);
     };
+    var getSingleRide = function (id) {  // was (index)
+      return $http.get(url + '/ride' +id);
+    };
     var addProduct = function (item) {
       item.reviews = [];
       $http.post(url, item);
@@ -64,6 +67,7 @@ angular.module('champazon')
 
     return {
       getItems: getProducts,
+      getItem: getSingleItem,
       addItem: addProduct,
       deleteItem: deleteProduct,
       editItem: editProduct,
