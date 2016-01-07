@@ -6,7 +6,7 @@
   .config(function ($routeProvider) {   //configuring routing
     $routeProvider
       .when('/', {
-        templateUrl: '/views/main.html',
+        templateUrl: 'app/views/main.html',
         controller: 'MainController as mainCtrl'
       })
       .when('/admin/editproduct/:itemIndex', {
