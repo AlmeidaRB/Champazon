@@ -1,3 +1,17 @@
 <!--User View - List All-->
 
-<span>TESTING</span>
+<div class="listContainer">
+  <ul>
+    <li class = "ride" ng-repeat="ride in mainCtrl.items">
+      <img ng-src="{{ride.image}}" height='250' alt=""/>
+      <div class="productInfo">
+      <p>Brand: {{ride.productName}}</p>
+      <p>Price: {{ride.price | currency}}</p>
+        <div class="buttons2">
+          <p><a href="#/user/detail/{{ride._id}}">More Details</a></p>
+          <p><a href="#/user/cart/" ng-click="mainCtrl.addToCart(ride)">Add to Cart</a></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
