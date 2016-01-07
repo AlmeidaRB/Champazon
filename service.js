@@ -4,7 +4,7 @@
 angular.module('champazon')
   .factory('StoreService', function ($http, $rootScope) {
 
-    var url = 'https://git.heroku.com/champazon.git';
+    var url = 'https://tiny-tiny.herokuapp.com/collections/champazon';
 
 // Functions for the Admin
 
