@@ -10,10 +10,6 @@
         mainCtrl.items = data;
       });
 
-      StoreService.getItem($routeParams.itemIndex).success(function(data) {
-        mainCtrl.singleItem = data;
-      });
-
       mainCtrl.currentIndex = $routeParams.itemIndex;
 
   // shopping cart
@@ -49,10 +45,6 @@
 
       StoreService.getItems().success(function(data) {
         adminCtrl.items = data;
-      });
-
-      StoreService.getItem($routeParams.itemIndex).success(function(data) {
-        adminCtrl.singleItem = data;
       });
 
       adminCtrl.currentIndex = $routeParams.itemIndex;
