@@ -15,8 +15,7 @@
       <p class="itemQuantity">Quantity: <span><input type="number" name="inputquant" ng-model="item.quant"></span></p>
       <p><button type="submit" ng-click="mainCtrl.deleteFromCart(item)">Delete</button>
       <button><a href="">Update</a></button></p>
-      <p class="itemTotal">Item total: {{item.quant * item.price | currency}}</p>
+      <p class="itemTotal">Total: {{item.quant * item.price | currency}}</p>
     </li>
   </ul>
-  <p class="totalPrice"> Total: {{mainCtrl.total() | currency}}</p>
 </div>
