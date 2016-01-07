@@ -51,10 +51,6 @@
         adminCtrl.items = data;
       });
 
-      StoreService.getItem($routeParams.itemIndex).success(function(data) {
-        adminCtrl.singleItem = data;
-      });
-
       adminCtrl.currentIndex = $routeParams.itemIndex;
 
       //login feature//
