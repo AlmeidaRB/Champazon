@@ -1,16 +1,16 @@
-<!--Admin View - Edit
+<!--Admin View - Edit-->
 
 <div class="arrowBack">
   <a href="#/admin/listView"><i class="fa fa-arrow-left"></i>Back to Admin</a>
 </div>
 
-<div class="productForm">
-  <h3>Edit product</h3>
-  <form ng-submit="adminCtrl.editProduct(adminCtrl.singleProduct)">
-    <p><input type="text" ng-model="adminCtrl.singleProduct.image" value="adminCtrl.singleProduct.image"></p>
-    <p><input type="text" ng-model="adminCtrl.singleProduct.productName" value="adminCtrl.singleProduct.productName"></p>
-    <p><input type="text" ng-model="adminCtrl.singleProduct.price" value="adminCtrl.singleProduct.price"></p>
-    <p><textarea type="text" ng-model="adminCtrl.singleProduct.productDescription" value="adminCtrl.singleProduct.productDescription"></textarea></p>
-    <p><button type="submit">Update Product</button></p>
+<div class="itemForm">
+  <h3>Edit item</h3>
+  <form ng-submit="adminCtrl.editItem(adminCtrl.singleItem)">
+    <p><input type="text" ng-model="adminCtrl.singleItem.image" value="adminCtrl.singleItem.image"></p>
+    <p><input type="text" ng-model="adminCtrl.singleItem.itemName" value="adminCtrl.singleItem.itemName"></p>
+    <p><input type="text" ng-model="adminCtrl.singleItem.price" value="adminCtrl.singleItem.price"></p>
+    <p><textarea type="text" ng-model="adminCtrl.singleItem.itemDescription" value="adminCtrl.singleItem.itemDescription"></textarea></p>
+    <p><button type="submit">Update Item</button></p>
   </form>
 </div>
