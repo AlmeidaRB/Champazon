@@ -1,4 +1,4 @@
-(function () {
+/*(function () {
 "use strict";
 
 angular.module('champazon')
@@ -35,7 +35,7 @@ angular.module('champazon')
       addProduct: addProduct,
       deleteProduct: deleteProduct,
       editProduct: editProduct
-      
+
     };
 
   });
