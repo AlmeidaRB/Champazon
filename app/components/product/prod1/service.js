@@ -19,7 +19,7 @@ angular.module('champazon')
       $http.post(url, item);
       $rootScope.$broadcast('item:created')
     };
-    var deleteProduct = function (id) {   //was (item)
+    var deleteItem = function (id) {   //was (item)
       $http.delete(url + '/' + id);
       $rootScope.$broadcast('item:deleted');
     };
@@ -69,7 +69,7 @@ angular.module('champazon')
       getItems: getProducts,
       getItem: getSingleItem,
       addItem: addProduct,
-      deleteItem: deleteProduct,
+      deleteItem: deleteItem,
       editItem: editProduct,
       addReview: addReview,
 

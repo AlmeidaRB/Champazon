@@ -72,7 +72,7 @@
 
       };
 
-      adminCtrl.deleteProduct = function (id) {
+      adminCtrl.deleteItem = function (id) {
         StoreService.deleteItem(id);
       };
 
