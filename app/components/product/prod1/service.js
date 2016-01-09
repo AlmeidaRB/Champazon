@@ -11,70 +11,70 @@ angular.module('champazon')
     var getProducts = function () {
       return $http.get(url);
     };
-    var getSingleItem = function (id) {  // was (index)
+    var getSingleProduct = function (id) {  // was (index)
       return $http.get(url + '/' +id);
     };
-    var addProduct = function (item) {
-      item.reviews = [];
-      $http.post(url, item);
-      $rootScope.$broadcast('item:created')
+    var addProduct = function (product) {
+      product.reviews = [];
+      $http.post(url, product);
+      $rootScope.$broadcast('product:created')
     };
-    var deleteItem = function (id) {   //was (item)
+    var deleteProduct = function (id) { 
       $http.delete(url + '/' + id);
-      $rootScope.$broadcast('item:deleted');
+      $rootScope.$broadcast('product:deleted');
     };
-    var editProduct = function (item, id) {  //was (item, index)
-      $http.put(url + '/' + id, item);
-      $rootScope.$broadcast('item:updated');
+    var editProduct = function (product, id) {
+      $http.put(url + '/' + id, product);
+      $rootScope.$broadcast('product:updated');
     };
 
 // Functions for the User
 
-    var addReview = function (item, review) {
+    var addReview = function (product, review) {
       review = {
         stars: 0,
         body: '',
         author: ''
       }
-      item.reviews.push(review);
-      $http.put(url + '/' + item._id, item);
+      product.reviews.push(review);
+      $http.put(url + '/' + product._id, product);
     };
 
 //Functions for the Cart
 
     var cart = [];
 
-    var addToCart = function (item) {
-      cart.push(item);
+    var addToCart = function (product) {
+      cart.push(product);
     };
 
     var getCartProducts = function () {
       return cart;
     };
 
-    var deleteCartProducts = function (item) {
-      var idx = cart.indexOf(item);
+    var deleteCartProducts = function (product) {
+      var idx = cart.indexOf(product);
       cart.splice(idx,1);
     };
 
     var total = function() {
       var total = 0;
-      angular.forEach(cart, function(item) {
-      total += item.quant * item.price;
+      angular.forEach(cart, function(product) {
+      total += product.quant * product.price;
       })
       return total;
     };
 
     return {
-      getItems: getProducts,
-      getItem: getSingleItem,
-      addItem: addProduct,
-      deleteItem: deleteItem,
-      editItem: editProduct,
+      getProducts: getProducts,
+      getProduct: getSingleProduct,
+      addProduct: addProduct,
+      deleteProduct: deleteProduct,
+      editProduct: editProduct,
       addReview: addReview,
 
       addToCart: addToCart,
-      getCartItems: getCartProducts,
+      getCartProducts: getCartProducts,
       deleteFromCart: deleteCartProducts,
       total: total
     };
