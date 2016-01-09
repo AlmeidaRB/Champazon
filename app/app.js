@@ -12,12 +12,12 @@
       /*.when('/admin/editproduct/:productIndex', {
         templateUrl:'app/components/admin/editProduct.html',
         controller: 'AdminController as adminCtrl'
-      })
+      })*/
       .when('/admin/listView', {
         templateUrl: 'app/components/admin/listView.html',
         controller: 'AdminController as adminCtrl'
       })
-      .when('/admin/addproduct', {
+      /*.when('/admin/addproduct', {
       templateUrl: 'app/components/admin/addNewProduct.html',
       controller: 'AdminController as adminCtrl'
     })*/

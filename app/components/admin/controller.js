@@ -1,5 +1,27 @@
-/*
-(function() {
+(function () {
+  "use strict";
+
+// user controller
+  angular.module('champazon')
+    .controller('AdminController', function (StoreService, $rootScope, $scope, $routeParams, $location) {
+      var adminCtrl = this;
+
+      StoreService.getProducts().success(function(data) {
+        adminCtrl.Products = data;
+      });
+
+      StoreService.getProduct($routeParams.productIndex).success(function(data) {
+        adminCtrl.singleProduct = data;
+      });
+
+      adminCtrl.currentIndex = $routeParams.productIndex;
+
+      });
+
+})();
+
+
+/*(function() {
   "use strict";
 
   angular.module('champazon')
@@ -44,3 +66,5 @@
     });
 
 })();
+////////////////////////////////////
+////////////////////////////////////
