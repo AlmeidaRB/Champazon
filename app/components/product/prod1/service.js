@@ -14,9 +14,9 @@ angular.module('champazon')
     var getSingleProduct = function (id) {
       return $http.get(url + '/' +id);
     };
-    var addProduct = function (product) {
+    var addProduct = function (product, id) {
       product.reviews = [];
-      $http.post(url, product);
+      $http.post(url, id, product);
       $rootScope.$broadcast('product:created')
     };
     var deleteProduct = function (id) {
