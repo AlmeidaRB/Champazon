@@ -3,34 +3,34 @@
 
 // user controller
   angular.module('champazon')
-    .controller('MainController', function (StoreService, $rootScope, $scope, $routeParams, $location) {
+    .controller('MainController', function (UserService, $rootScope, $scope, $routeParams, $location) {
       var mainCtrl = this;
 
-      StoreService.getProducts().success(function(data) {
+      UserService.getProducts().success(function(data) {
         mainCtrl.Products = data;
       });
 
-      StoreService.getProduct($routeParams.productIndex).success(function(data) {
+      UserService.getProduct($routeParams.productIndex).success(function(data) {
         mainCtrl.singleProduct = data;
       });
 
       mainCtrl.currentIndex = $routeParams.productIndex;
 
   // shopping cart
-        mainCtrl.cart = StoreService.getCartProducts();
-        mainCtrl.total = StoreService.total();
+        mainCtrl.cart = UserService.getCartProducts();
+        mainCtrl.total = UserService.total();
 
         mainCtrl.addToCart = function(product) {
-          StoreService.addToCart(product);
+          UserService.addToCart(product);
           $location.path('/user/cart');
         };
 
         mainCtrl.deleteFromCart = function(product) {
-          StoreService.deleteFromCart(product);
+          UserService.deleteFromCart(product);
         };
 
         mainCtrl.addReview = function (product, review) {
-          StoreService.addReview(product, review);
+          UserService.addReview(product, review);
           $scope.review = {};
         };
 

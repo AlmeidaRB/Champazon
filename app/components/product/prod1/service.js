@@ -2,11 +2,11 @@
 "use strict";
 
 angular.module('champazon')
-  .factory('StoreService', function ($http, $rootScope) {
+  .factory('UserService', function ($http, $rootScope) {
 
     var url = 'https://tiny-tiny.herokuapp.com/collections/champazon';
 
-// Functions for the Admin
+// Functions for the User
 
     var getProducts = function () {
       return $http.get(url);
@@ -14,22 +14,6 @@ angular.module('champazon')
     var getSingleProduct = function (id) {
       return $http.get(url + '/' +id);
     };
-    var addProduct = function (product) {
-      product.reviews = [];
-      $http.post(url, product);
-      $rootScope.$broadcast('product:created')
-    };
-    var deleteProduct = function (id) {
-      $http.delete(url + '/' + id);
-      $rootScope.$broadcast('product:deleted');
-    };
-    var editProduct = function (product, id) {
-      $http.put(url + '/' + id, product);
-      $rootScope.$broadcast('product:updated');
-    };
-
-// Functions for the User
-
     var addReview = function (product, review) {
       review = {
         stars: 0,
@@ -66,17 +50,15 @@ angular.module('champazon')
     };
 
     return {
+      
       getProducts: getProducts,
       getProduct: getSingleProduct,
-      addProduct: addProduct,
-      deleteProduct: deleteProduct,
-      editProduct: editProduct,
       addReview: addReview,
-
       addToCart: addToCart,
       getCartProducts: getCartProducts,
       deleteFromCart: deleteCartProducts,
       total: total
+
     };
 
   });
