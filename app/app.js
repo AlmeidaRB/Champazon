@@ -9,8 +9,8 @@
         templateUrl: 'app/components/home/main.html',
         controller: 'MainController as mainCtrl'
       })
-      .when('/admin/editproduct/:itemIndex', {
-        templateUrl:'app/components/admin/editItem.html',
+      .when('/admin/editproduct/:productIndex', {
+        templateUrl:'app/components/admin/editProduct.html',
         controller: 'AdminController as adminCtrl'
       })
       .when('/admin/listView', {
@@ -18,7 +18,7 @@
         controller: 'AdminController as adminCtrl'
       })
       .when('/admin/addproduct', {
-      templateUrl: 'app/components/admin/addNewItem.html',
+      templateUrl: 'app/components/admin/addNewProduct.html',
       controller: 'AdminController as adminCtrl'
       })
       .when('/product/prod1/listView', {
@@ -29,7 +29,7 @@
         templateUrl: 'app/components/product/prod1/shoppingCart.html',
         controller: 'MainController as mainCtrl'
       })
-      .when('/user/detail/:itemIndex', {
+      .when('/user/detail/:productIndex', {
         templateUrl: 'app/components/produc/prod1/detailView.html',
         controller: 'MainController as mainCtrl'
       })
