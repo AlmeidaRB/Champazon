@@ -1,20 +1,20 @@
 <!--User View - Detail-->
 
 <div class="arrowBack">
-  <a href="#/user/listView"><i class="fa fa-arrow-left"></i>Back to Shop</a>
+  <a href="#/product/prod1/listView"><i class="fa fa-arrow-left"></i>Back to Shop</a>
 </div>
 
 <div class="detailContainer">
-  <div class = "itemDetail">
+  <div class = "productDetail">
     <div class="productImagePrice">
-      <img data-ng-src="{{mainCtrl.singleItem.image}}" height='250' alt=""/>
-      <p>Brand: {{mainCtrl.singleItem.productName}}</p>
-      <p>Price: {{mainCtrl.singleItem.price | currency}}</p>
+      <img data-ng-src="{{mainCtrl.singleProduct.image}}" height='250' alt=""/>
+      <p>Brand: {{mainCtrl.singleProduct.productName}}</p>
+      <p>Price: {{mainCtrl.singleProduct.price | currency}}</p>
     </div>
     <div class="productDetails">
-      <p>{{mainCtrl.singleItem.productDescription}}</p>
+      <p>{{mainCtrl.singleProduct.productDescription}}</p>
       <div class="buttons2">
-        <p><a href="#/user/cart/" ng-click="mainCtrl.addToCart(mainCtrl.singleItem)">Add to Cart</a></p>
+        <p><a href="#/user/cart/" ng-click="mainCtrl.addToCart(mainCtrl.singleProduct)">Add to Cart</a></p>
       </div>
       <div>
         <p><a href="" ng-click="showReviews = !showReviews">Show Reviews</a></p>
@@ -26,7 +26,7 @@
   <div class="productReviews"  ng-show = "showReviews"> <!-- ng-controller="ReviewController as reviewCtrl" -->
     <p>Reviews:</p>
       <ul>
-        <li class="review" ng-repeat="review in mainCtrl.singleItem.reviews"> <!--"review in reviewCtrl.reviews" -->
+        <li class="review" ng-repeat="review in mainCtrl.singleProduct.reviews"> <!--"review in reviewCtrl.reviews" -->
           <p>Stars: {{review.stars}}</p>
           <p>{{review.body}}</p>
           <p>By: {{review.author}}</p>
@@ -34,7 +34,7 @@
       </ul>
     <p><a href="" ng-click="showAddReview = !showAddReview">Add A Review</a></p>
     <div class="addReview" ng-show = "showAddReview" >
-      <form name="reviewForm" ng-submit="mainCtrl.addReview(mainCtrl.singleItem, review)">
+      <form name="reviewForm" ng-submit="mainCtrl.addReview(mainCtrl.singleProduct, review)">
         <p class="stars">Stars: <span><input type="number" name="reviewstars" ng-model="review.stars"></span></p>
         <p class="reviewBody">
         <textarea name="reviewBody" ng-model="review.body" cols="30" rows="10"></textarea>

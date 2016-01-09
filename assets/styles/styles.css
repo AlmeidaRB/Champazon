@@ -142,7 +142,7 @@ a {
 .buttons2 {
   text-align: center; }
 
-.item {
+.product {
   border-right: 2px solid gray; }
 
 .arrowBack {
@@ -257,7 +257,7 @@ form {
   margin: 20px;
   font-size: 18px; }
 
-.itemQuantity input {
+.productQuantity input {
   width: 25px; }
 
 .cartContainer ul {
