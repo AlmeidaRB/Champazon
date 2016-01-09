@@ -3,17 +3,17 @@
 <h1>Welcome Administrator</h1>
 <div class="listContainer">
   <ul>
-    <li class = "product" ng-repeat="product in adminCtrl.products">
-      <img data-ng-src="{{product.image}}" height='250' alt=""/>
-      <div class="productInfo">
+    <li class = "product" ng-repeat="item in adminCtrl.items">
+      <img data-ng-src="{{item.image}}" height='250' alt=""/>
+      <div class="itemInfo">
         <p>Brand: {{product.productName}}</p>
         <p>Price: {{product.price | currency}}</p>
         <p>Description: {{product.productDescription}}</p>
-        <p><button><a href="#/admin/editproduct/{{product._id}}" class="listviewEdit">Edit</a></button>
-        <button type="submit" ng-click="adminCtrl.deleteProduct(product._id)">Delete product</button></p>
+        <p><button><a href="#/admin/editItem/{{item._id}}" class="listviewEdit">Edit</a></button>
+        <button type="submit" ng-click="adminCtrl.deleteItem(item._id)">Delete item</button></p>
       </div>
     </li>
   </ul>
 </div>
 
-<p><a href="#/admin/addproduct"><i class="fa fa-plus"></i>Add Product</a></p>
+<p><a href="#/admin/additem"><i class="fa fa-plus"></i>Add item</a></p>
