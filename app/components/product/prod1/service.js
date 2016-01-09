@@ -11,8 +11,8 @@ angular.module('champazon')
     var getProducts = function () {
       return $http.get(url);
     };
-    var getSingleProduct = function (prod1) {
-      return $http.get(url + '/' +prod1);
+    var getSingleProduct = function (id) {
+      return $http.get(url + '/' +id);
     };
     var addProduct = function (product) {
       product.reviews = [];
