@@ -17,7 +17,7 @@
         templateUrl: 'app/components/admin/listView.html',
         controller: 'AdminController as adminCtrl'
       })
-      .when('/admin/addproduct', {
+      .when('/admin/addProduct', {
       templateUrl: 'app/components/admin/addNewProduct.html',
       controller: 'AdminController as adminCtrl'
     })
