@@ -1,5 +1,6 @@
 (function() {
   "use strict";
+
   angular.module('champazon')
     .controller('AdminController', function (StoreService, $rootScope, $scope, $routeParams, $location) {
 
@@ -41,3 +42,8 @@
 
     });
 })();
+
+
+
+
+(
