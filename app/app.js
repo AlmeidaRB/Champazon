@@ -21,16 +21,16 @@
       templateUrl: 'app/components/admin/addNewItem.html',
       controller: 'AdminController as adminCtrl'
       })
-      .when('/user/listView', {
-        templateUrl: 'app/components/user/listView.html',
+      .when('/product/prod1/listView', {
+        templateUrl: 'app/components/product/prod1/listView.html',
         controller: 'MainController as mainCtrl'
       })
       .when('/user/cart', {
-        templateUrl: 'app/components/user/shoppingCart.html',
+        templateUrl: 'app/components/product/prod1/shoppingCart.html',
         controller: 'MainController as mainCtrl'
       })
       .when('/user/detail/:itemIndex', {
-        templateUrl: 'app/components/user/detailView.html',
+        templateUrl: 'app/components/produc/prod1/detailView.html',
         controller: 'MainController as mainCtrl'
       })
       .when('/not-found', {
