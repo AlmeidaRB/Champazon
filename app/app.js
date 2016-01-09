@@ -17,7 +17,7 @@
         templateUrl: 'app/components/admin/listView.html',
         controller: 'AdminController as adminCtrl'
       })
-      .when('/admin/addProduct', {
+      .when('/admin/addproduct', {
       templateUrl: 'app/components/admin/addNewProduct.html',
       controller: 'AdminController as adminCtrl'
     })
@@ -29,8 +29,8 @@
         templateUrl: 'app/components/product/prod1/shoppingCart.html',
         controller: 'MainController as mainCtrl'
       })
-      .when('/user/detail/:productIndex', {
-        templateUrl: 'app/components/produc/prod1/detailView.html',
+      .when('/product/detail/:productIndex', {
+        templateUrl: 'app/components/product/prod1/detailView.html',
         controller: 'MainController as mainCtrl'
       })
       .when('/not-found', {
